@@ -75,6 +75,66 @@ void mainMenu()
     printf("╚══════════════════════╝\n");
 }
 
+void addition()
+{
+    int num1 = 0;
+    int num2 = 0;
+    int sum = 0;
+    printf("\n WELCOME TO ADDITION \n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number:");
+
+    sum = num1 + num2;
+
+    printf("The sum of %d and %d is %d", num1, num2, sum);
+}
+
+void subtraction()
+{
+    int num1 = 0;
+    int num2 = 0;
+    int difference = 0;
+    printf("\n WELCOME TO SUBTRACTION \n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number:");
+
+    difference = num1 + num2;
+
+    printf("The difference of %d and %d is %d", num1, num2, difference);
+}
+
+void multiplication()
+{
+    int num1 = 0;
+    int num2 = 0;
+    int product = 0;
+    printf("\n WELCOME TO MULTIPLICATION \n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number:");
+
+    product = num1 + num2;
+
+    printf("The product of %d and %d is %d", num1, num2, product);
+}
+
+void division()
+{
+    int num1 = 0;
+    int num2 = 0;
+    int product = 0;
+    printf("\n WELCOME TO DIVISION \n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number:");
+
+    quotient = num1 + num2;
+
+    printf("The quotient of %d and %d is %d", num1, num2, quotient);
+}
+
 void gotoxy(int x, int y)
 {
     COORD c = {x, y};
