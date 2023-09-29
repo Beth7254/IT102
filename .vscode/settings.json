@@ -3,5 +3,6 @@
         "ACTIVITY_NUMBER1.C": "cpp",
         "SAMPLE.C": "cpp",
         "HI.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

@@ -4,135 +4,127 @@
 
 void gotoxy(int x, int y);
 void mainMenu();
+int add();
+void subtract();
+void multiply();
+void divide();
+void border();
 
 int main()
 {
     system("chcp 65001 >null");
-    int choice, num1, num2, result;
-    char go;
+    int choice;
 
-    do
+    gotoxy(50, 20);
+    mainMenu();
+
+    system("Color 0C");
+    printf("Enter choice (1-5): ");
+    scanf("%d", &choice);
+    switch (choice)
     {
-        system("cls");
-        mainMenu();
-
-        printf("Choose an operation (1-5): ");
-        scanf("%d", &choice);
-
-        if (choice == 5)
-        {
-            break;
-        }
-
-        printf("Enter two numbers: ");
-        scanf("%d %d", &num1, &num2);
-
-        switch (choice)
-        {
-        case 1:
-            result = num1 + num2;
-            printf("Result: %d\n", result);
-            break;
-
-        case 2:
-            result = num1 - num2;
-            printf("Result: %d\n", result);
-            break;
-
-        case 3:
-            result = num1 * num2;
-            printf("Result: %d\n", result);
-            break;
-
-        case 4:
-            result = num1 / num2;
-            printf("Result: %d\n", result);
-            break;
-
-        default:
-            printf("Invalid choice\n");
-            break;
-        }
-
-        printf("Do you want to continue? (y/n): ");
-        scanf(" %c", &go);
-
-    } while (go == 'y');
-
-    return 0;
+    case 1:
+        add();
+        break;
+    case 2:
+        subtract();
+        break;
+    case 3:
+        multiply();
+        break;
+    case 4:
+        divide();
+        break;
+    case 5:
+        printf("Goobye");
+        getch();
+        break;
+    }
 }
 
 void mainMenu()
-{
+{   gotoxy(50,20);
+    system("Color 1D");
     printf("╔══════════════════════╗\n");
     printf("║      MAIN MENU       ║\n");
-    printf("╠══════════════════════╣\n");
+    printf("║══════════════════════║\n");
     printf("║ 1. Addition          ║\n");
     printf("║ 2. Subtraction       ║\n");
     printf("║ 3. Multiplication    ║\n");
     printf("║ 4. Division          ║\n");
     printf("║ 5. End Program       ║\n");
     printf("╚══════════════════════╝\n");
+
 }
 
-void addition()
+int add()
 {
-    int num1 = 0;
-    int num2 = 0;
-    int sum = 0;
-    printf("\n WELCOME TO ADDITION \n");
-    printf("Enter first number: ");
+    system("cls");
+    border();
+    int num1, num2, sum;
+    gotoxy(3, 1);printf("Welcome to Addition\n");
+    gotoxy(2, 3);printf("Enter first num: ");
     scanf("%d", &num1);
-    printf("Enter second number:");
-
+    gotoxy(2, 4);printf("Enter second num: ");
+    scanf("%d", &num2);
     sum = num1 + num2;
-
-    printf("The sum of %d and %d is %d", num1, num2, sum);
+    gotoxy(2, 5);printf("The sum of %d and %d\n ", num1, num2);
+    gotoxy(2, 6);printf("is %d\n", sum);
+    printf("\n\n Try again?");
+    return 0;
 }
-
-void subtraction()
+void subtract()
 {
-    int num1 = 0;
-    int num2 = 0;
-    int difference = 0;
-    printf("\n WELCOME TO SUBTRACTION \n");
-    printf("Enter first number: ");
+    system("cls");
+    border();
+    gotoxy(3,1);printf("Welcome to Subtraction\n");
+    int num1, num2, diff;
+    gotoxy(2,3);printf("Enter first num: ");
     scanf("%d", &num1);
-    printf("Enter second number:");
-
-    difference = num1 + num2;
-
-    printf("The difference of %d and %d is %d", num1, num2, difference);
+    gotoxy(2, 4);printf("Enter second num: ");
+    scanf("%d", &num2);
+    diff = num1 - num2;
+    gotoxy(2, 5);printf("The difference of %d and %d\n ", num1, num2);
+    gotoxy(2, 6);printf(" is %d\n", diff);
+    printf("\n\nTry again?");
 }
-
-void multiplication()
+void multiply()
 {
-    int num1 = 0;
-    int num2 = 0;
-    int product = 0;
-    printf("\n WELCOME TO MULTIPLICATION \n");
-    printf("Enter first number: ");
+    system("cls");
+    printf("Welcome to Multiplication\n");
+    int num1, num2, prod;
+    printf("Enter first num: ");
     scanf("%d", &num1);
-    printf("Enter second number:");
-
-    product = num1 + num2;
-
-    printf("The product of %d and %d is %d", num1, num2, product);
+    printf("Enter second num: ");
+    scanf("%d", &num2);
+    prod = num1 * num2;
+    printf("The product of %d and %d\nis %d", num1, num2, prod);
+    printf("\nTry again?");
 }
-
-void division()
+void divide()
 {
-    int num1 = 0;
-    int num2 = 0;
-    int product = 0;
-    printf("\n WELCOME TO DIVISION \n");
-    printf("Enter first number: ");
+    system("cls");
+    printf("Welcome to Division\n");
+    int num1, num2, qou;
+    printf("Enter first num: ");
     scanf("%d", &num1);
-    printf("Enter second number:");
-
-    quotient = num1 + num2;
-
-    printf("The quotient of %d and %d is %d", num1, num2, quotient);
+    printf("Enter second num: ");
+    scanf("%d", &num2);
+    qou = num1 / num2;
+    printf("The product of %d and %d\nis %d\n", num1, num2, qou);
+    printf("\n\nTry again?");
+}
+void border()
+{
+    printf("╔══════════════════════════╗\n");
+    printf("║                          ║\n");
+    printf("║══════════════════════════║\n");
+    printf("║                          ║\n");
+    printf("║                          ║\n");
+    printf("║                          ║\n");
+    printf("║                          ║\n");
+    printf("║                          ║\n");
+    printf("╚══════════════════════════╝\n");
 }
 
 void gotoxy(int x, int y)
