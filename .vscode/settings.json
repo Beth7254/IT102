@@ -2,7 +2,9 @@
     "files.associations": {
         "ACTIVITY_NUMBER1.C": "cpp",
         "SAMPLE.C": "cpp",
-        "HI.C": "cpp"
+        "HI.C": "cpp",
+        "EXAM.C": "cpp",
+        "ACTIVITY_NUMBER2.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
