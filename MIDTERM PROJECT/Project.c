@@ -101,14 +101,14 @@ int tryAgain()
 
 void mainMenu()
 {
-    gotoxy(47, 5); printf("╔══════════════════════╗\n");
-    gotoxy(47, 6); printf("║      MAIN MENU       ║\n");
-    gotoxy(47, 7); printf("║══════════════════════║\n");
-    gotoxy(47, 8); printf("║ 1. Pattern           ║\n");
-    gotoxy(47, 9); printf("║ 2. Fseries           ║\n");
-    gotoxy(47, 10); printf("║ 3. Calculator        ║\n");
-    gotoxy(47, 11); printf("║ 4. End Program       ║\n");
-    gotoxy(47, 12); printf("╚══════════════════════╝\n");
+    gotoxy(47, 5);  printf("╔══════════════════════╗ \n");
+    gotoxy(47, 6);  printf("║      MAIN MENU       ║ \n");
+    gotoxy(47, 7);  printf("║══════════════════════║ \n");
+    gotoxy(47, 8);  printf("║ 1. Pattern           ║ \n");
+    gotoxy(47, 9);  printf("║ 2. Fseries           ║ \n");
+    gotoxy(47, 10); printf("║ 3. Calculator        ║ \n");
+    gotoxy(47, 11); printf("║ 4. End Program       ║ \n");
+    gotoxy(47, 12); printf("╚══════════════════════╝ \n");
 }
 
 void pattern()
