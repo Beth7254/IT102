@@ -358,11 +358,11 @@ void mainCalculator()
 
 void mainMenucalculator()
 {
-    gotoxy(47, 5); printf("╔══════════════════════╗\n");
-    gotoxy(47, 6); printf("║      MAIN MENU       ║\n");
-    gotoxy(47, 7); printf("║══════════════════════║\n");
-    gotoxy(47, 8); printf("║ 1. Addition          ║\n");
-    gotoxy(47, 9); printf("║ 2. Subtraction       ║\n");
+    gotoxy(47, 5);  printf("╔══════════════════════╗\n");
+    gotoxy(47, 6);  printf("║      MAIN MENU       ║\n");
+    gotoxy(47, 7);  printf("║══════════════════════║\n");
+    gotoxy(47, 8);  printf("║ 1. Addition          ║\n");
+    gotoxy(47, 9);  printf("║ 2. Subtraction       ║\n");
     gotoxy(47, 10); printf("║ 3. Multiplication    ║\n");
     gotoxy(47, 11); printf("║ 4. Division          ║\n");
     gotoxy(47, 12); printf("║ 5. Back              ║\n");
@@ -370,11 +370,11 @@ void mainMenucalculator()
 }
 void borderCalculator()
 {
-    gotoxy(47, 5); printf("╔═══════════════════════════════╗\n");
-    gotoxy(47, 6); printf("║                               ║\n");
-    gotoxy(47, 7); printf("║═══════════════════════════════║\n");
-    gotoxy(47, 8); printf("║                               ║\n");
-    gotoxy(47, 9); printf("║                               ║\n");
+    gotoxy(47, 5);  printf("╔═══════════════════════════════╗\n");
+    gotoxy(47, 6);  printf("║                               ║\n");
+    gotoxy(47, 7);  printf("║═══════════════════════════════║\n");
+    gotoxy(47, 8);  printf("║                               ║\n");
+    gotoxy(47, 9);  printf("║                               ║\n");
     gotoxy(47, 10); printf("║                               ║\n");
     gotoxy(47, 11); printf("║                               ║\n");
     gotoxy(47, 12); printf("║                               ║\n");
