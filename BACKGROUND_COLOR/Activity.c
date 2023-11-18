@@ -78,7 +78,7 @@ void main()
 
 void endProgram()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED);
     gotoxy(48, 11);
     printf(" >  End Program       ");
 
@@ -87,7 +87,7 @@ void endProgram()
 
 void calculator()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
     gotoxy(48, 10);
     printf(" >  Calculator        ");
 
@@ -96,7 +96,7 @@ void calculator()
 
 void series()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
     gotoxy(48, 9);
     printf(" >  Fseries           ");
 
@@ -105,7 +105,7 @@ void series()
 
 void pattern()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND);
     gotoxy(48, 8);
     printf(" >  Pattern           ");
 
