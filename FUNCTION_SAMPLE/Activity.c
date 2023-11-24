@@ -13,6 +13,7 @@ void main()
 }
 
 void mainMenu()
+
 {
     printf("╔══════════════════════╗\n");
     printf("║      MAIN MENU       ║\n");
