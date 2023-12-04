@@ -4,7 +4,10 @@
         "SAMPLE.C": "cpp",
         "HI.C": "cpp",
         "EXAM.C": "cpp",
-        "ACTIVITY_NUMBER2.C": "cpp"
+        "ACTIVITY_NUMBER2.C": "cpp",
+        "FP.C": "cpp",
+        "ACTIVITY_NUMBER3.C": "cpp",
+        "DIPAFINAL.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }

@@ -9,11 +9,6 @@ void calculator();
 void endProgram();
 void patternBody();
 void seriesbody();
-void calculatorbody() void gotoxy(int x, int y);
-int tryAgain();
-void returnHome();
-void userAdd();
-
 void mainMenucalculator();
 void borderCalculator();
 void add();
@@ -21,12 +16,18 @@ void subtract();
 void multiply();
 void divide();
 void userAdd();
+
 int menuChoicecalculator();
 boolean tryAgaincalculator();
 void returnHomecalculator();
 void mainCalculator();
-int num1 = 0, num2 = 0, sum = 0, diff = 0, prod = 0;
-float qou = 0;
+void gotoxy(int x, int y);
+int tryAgain();
+void returnHome();
+void userAdd();
+
+int num1 = 0, num2 = 0, sum = 0, diff = 0, prod = 0; float qou = 0;
+
 
 void main()
 {
@@ -64,7 +65,7 @@ void main()
                 seriesbody();
                 break;
             case 3:
-                calculatorbody();
+                menuChoicecalculator();
                 // function for calculator module
                 break;
             case 4:
@@ -93,6 +94,7 @@ void main()
     }
 }
 
+
 int tryAgain()
 {
     return 1;
@@ -106,7 +108,7 @@ void patternBody()
     int i = 0, j = 0, rows = 5, k = 0;
     int di = 0, dj = 0, dn = 5;
 
-    printf("     PATTERN");
+    printf("     PATTERN \n");
     printf("Pattern #1: \n");
     for (ai = 1; ai <= 5; ai++)
     {
@@ -236,230 +238,228 @@ void seriesbody()
         returnHome();
 }
 
-void calculatorbody()
+
+void exitProgram()
+{
+    printf("\nProgram End.");
+    exit(0);
+}
+void returnHome()
 {
     system("cls");
-    void exitProgram()
-    {
-        printf("\nProgram End.");
-        exit(0);
-    }
-    void returnHome()
-    {
-        system("cls");
-        main();
-    }
-    void returnHomecalculator()
-    {
-        system("cls");
-        mainCalculator();
-    }
+    main();
+}
+void returnHomecalculator()
+{
+    system("cls");
+    mainCalculator();
+}
 
-    void userAdd()
-    {
-        gotoxy(50, 8);
-        printf("Enter first num: ");
-        scanf("%d", &num1);
-        gotoxy(50, 9);
-        printf("Enter second num: ");
-        scanf("%d", &num2);
-    }
+void userAdd()
+{
+    gotoxy(50, 8);
+    printf("Enter first num: ");
+    scanf("%d", &num1);
+    gotoxy(50, 9);
+    printf("Enter second num: ");
+    scanf("%d", &num2);
+}
 
-    int menuChoicecalculator()
-    {
-        system("cls");
-        int choicecalculator = 0;
+int menuChoicecalculator()
+{
+    system("cls");
+    int choicecalculator = 0;
 
-        do
+    do
+    {
+        gotoxy(47, 14);
+        printf("\nEnter choice (1-5): ");
+        choicecalculator = getch();
+
+        if (choicecalculator <= 48 || choicecalculator >= 54)
         {
-            gotoxy(47, 14);
-            printf("\nEnter choice (1-5): ");
-            choicecalculator = getch();
+            choicecalculator = 48;
+            printf("Invalid Input.");
+        }
 
-            if (choicecalculator <= 48 || choicecalculator >= 54)
-            {
-                choicecalculator = 48;
-                printf("Invalid Input.");
-            }
+        else
+            break;
 
-            else
-                break;
+    } while (choicecalculator <= 0 || choicecalculator >= 6);
 
-        } while (choicecalculator <= 0 || choicecalculator >= 6);
+    return choicecalculator - 48;
+}
+boolean tryAgaincalculator()
+{
+    char retry = ' ';
+    boolean tryAgain = 0;
 
-        return choicecalculator - 48;
-    }
-    boolean tryAgaincalculator()
+    do
     {
-        char retry = ' ';
-        boolean tryAgain = 0;
+        printf("Try again? (y/n)");
+        retry = getch();
 
-        do
-        {
-            printf("Try again? (y/n)");
-            retry = getch();
-
-            if (retry != 'n' && retry != 'N' && retry != 'y' && retry != 'Y')
-                printf("Invalid input");
-
-            else if (retry == 'y' || retry == 'Y')
-            {
-                tryAgain = 1;
-                break;
-            }
-
-            else
-            {
-                tryAgain = 0;
-                break;
-            }
-
-        } while (retry != 'n' && retry != 'N' && retry != 'y' && retry != 'Y');
-
-        return tryAgain;
-    }
-    void mainCalculator()
-    {
-        system("chcp 65001 >null");
-        int choice;
-        mainMenucalculator();
-
-        choice = menuChoicecalculator();
-
-        if (choice < 1 || choice > 5)
+        if (retry != 'n' && retry != 'N' && retry != 'y' && retry != 'Y')
             printf("Invalid input");
-        else if (choice == 1)
-            add();
-        else if (choice == 2)
-            subtract();
-        else if (choice == 3)
-            multiply();
-        else if (choice == 4)
-            divide();
-        else if (choice == 5)
-            main();
-        else
-            returnHome();
-    }
 
-    void mainMenucalculator()
-    {
-        gotoxy(47, 5);
-        printf("╔══════════════════════╗\n");
-        gotoxy(47, 6);
-        printf("║      MAIN MENU       ║\n");
-        gotoxy(47, 7);
-        printf("║══════════════════════║\n");
-        gotoxy(47, 8);
-        printf("║ 1. Addition          ║\n");
-        gotoxy(47, 9);
-        printf("║ 2. Subtraction       ║\n");
-        gotoxy(47, 10);
-        printf("║ 3. Multiplication    ║\n");
-        gotoxy(47, 11);
-        printf("║ 4. Division          ║\n");
-        gotoxy(47, 12);
-        printf("║ 5. Back              ║\n");
-        gotoxy(47, 13);
-        printf("╚══════════════════════╝\n");
-    }
-    void borderCalculator()
-    {
-        gotoxy(47, 5);
-        printf("╔═══════════════════════════════╗\n");
-        gotoxy(47, 6);
-        printf("║                               ║\n");
-        gotoxy(47, 7);
-        printf("║═══════════════════════════════║\n");
-        gotoxy(47, 8);
-        printf("║                               ║\n");
-        gotoxy(47, 9);
-        printf("║                               ║\n");
-        gotoxy(47, 10);
-        printf("║                               ║\n");
-        gotoxy(47, 11);
-        printf("║                               ║\n");
-        gotoxy(47, 12);
-        printf("║                               ║\n");
-        gotoxy(47, 13);
-        printf("╚═══════════════════════════════╝\n");
-    }
+        else if (retry == 'y' || retry == 'Y')
+        {
+            tryAgain = 1;
+            break;
+        }
 
-    void add()
-    {
-        system("cls");
-        borderCalculator();
-        gotoxy(50, 6);
-        printf("Welcome to Addition\n");
-        userAdd();
-        sum = num1 + num2;
-        gotoxy(50, 10);
-        printf("The sum of %d and %d\n", num1 + num2, num1, num2);
-        gotoxy(50, 11);
-        printf("is %d\n", sum);
+        else
+        {
+            tryAgain = 0;
+            break;
+        }
 
-        if (tryAgaincalculator())
-            add();
-        else
-            returnHomecalculator();
-    }
+    } while (retry != 'n' && retry != 'N' && retry != 'y' && retry != 'Y');
 
-    void subtract()
-    {
-        system("cls");
-        borderCalculator();
-        gotoxy(50, 6);
-        printf("Welcome to Subtraction\n");
-        userAdd();
-        diff = num1 - num2;
-        gotoxy(50, 10);
-        printf("The difference of %d and %d\n", num1 - num2, num1, num2);
-        gotoxy(50, 11);
-        printf("is %d\n", diff);
+    return tryAgain;
+}
+void mainCalculator()
+{
+    system("chcp 65001 >null");
+    int choice;
+    mainMenucalculator();
 
-        if (tryAgaincalculator())
-            subtract();
-        else
-            returnHomecalculator();
-    }
-    void multiply()
-    {
-        system("cls");
-        borderCalculator();
-        gotoxy(50, 6);
-        printf("Welcome to Multiplication\n");
-        userAdd();
-        prod = num1 * num2;
-        gotoxy(50, 10);
-        printf("The product of %d and %d\n", num1 * num2, num1, num2);
-        gotoxy(50, 11);
-        printf("is %d\n", prod);
-        if (tryAgaincalculator())
-            multiply();
-        else
-            returnHomecalculator();
-    }
-    void divide()
-    {
-        system("cls");
-        borderCalculator();
-        gotoxy(50, 6);
-        printf("Welcome to Division\n");
-        userAdd();
-        qou = num1 / num2;
-        gotoxy(50, 10);
-        printf("The qoutient of %d and %d\n", num1, num2);
-        gotoxy(50, 11);
-        printf("is %.2f", qou);
-        if (tryAgaincalculator())
-            divide();
-        else
-            returnHomecalculator();
-    }
-    getch();
+    choice = menuChoicecalculator();
+
+    if (choice < 1 || choice > 5)
+        printf("Invalid input");
+    else if (choice == 1)
+        add();
+    else if (choice == 2)
+        subtract();
+    else if (choice == 3)
+        multiply();
+    else if (choice == 4)
+        divide();
+    else if (choice == 5)
+        main();
+    else
+        returnHome();
+}
+
+void mainMenucalculator()
+{
+    gotoxy(47, 5);
+    printf("╔══════════════════════╗\n");
+    gotoxy(47, 6);
+    printf("║      MAIN MENU       ║\n");
+    gotoxy(47, 7);
+    printf("║══════════════════════║\n");
+    gotoxy(47, 8);
+    printf("║ 1. Addition          ║\n");
+    gotoxy(47, 9);
+    printf("║ 2. Subtraction       ║\n");
+    gotoxy(47, 10);
+    printf("║ 3. Multiplication    ║\n");
+    gotoxy(47, 11);
+    printf("║ 4. Division          ║\n");
+    gotoxy(47, 12);
+    printf("║ 5. Back              ║\n");
+    gotoxy(47, 13);
+    printf("╚══════════════════════╝\n");
+}
+void borderCalculator()
+{
+    gotoxy(47, 5);
+    printf("╔═══════════════════════════════╗\n");
+    gotoxy(47, 6);
+    printf("║                               ║\n");
+    gotoxy(47, 7);
+    printf("║═══════════════════════════════║\n");
+    gotoxy(47, 8);
+    printf("║                               ║\n");
+    gotoxy(47, 9);
+    printf("║                               ║\n");
+    gotoxy(47, 10);
+    printf("║                               ║\n");
+    gotoxy(47, 11);
+    printf("║                               ║\n");
+    gotoxy(47, 12);
+    printf("║                               ║\n");
+    gotoxy(47, 13);
+    printf("╚═══════════════════════════════╝\n");
+}
+
+void add()
+{
+    system("cls");
+    borderCalculator();
+    gotoxy(50, 6);
+    printf("Welcome to Addition\n");
+    userAdd();
+    sum = num1 + num2;
+    gotoxy(50, 10);
+    printf("The sum of %d and %d\n", num1 + num2, num1, num2);
+    gotoxy(50, 11);
+    printf("is %d\n", sum);
+
+    if (tryAgaincalculator())
+        add();
+    else
+        returnHomecalculator();
+}
+
+void subtract()
+{
+    system("cls");
+    borderCalculator();
+    gotoxy(50, 6);
+    printf("Welcome to Subtraction\n");
+    userAdd();
+    diff = num1 - num2;
+    gotoxy(50, 10);
+    printf("The difference of %d and %d\n", num1 - num2, num1, num2);
+    gotoxy(50, 11);
+    printf("is %d\n", diff);
+
+    if (tryAgaincalculator())
+        subtract();
+    else
+        returnHomecalculator();
+}
+void multiply()
+{
+    system("cls");
+    borderCalculator();
+    gotoxy(50, 6);
+    printf("Welcome to Multiplication\n");
+    userAdd();
+    prod = num1 * num2;
+    gotoxy(50, 10);
+    printf("The product of %d and %d\n", num1 * num2, num1, num2);
+    gotoxy(50, 11);
+    printf("is %d\n", prod);
+    if (tryAgaincalculator())
+        multiply();
+    else
+        returnHomecalculator();
+}
+void divide()
+{
+    system("cls");
+    borderCalculator();
+    gotoxy(50, 6);
+    printf("Welcome to Division\n");
+    userAdd();
+    qou = num1 / num2;
+    gotoxy(50, 10);
+    printf("The qoutient of %d and %d\n", num1, num2);
+    gotoxy(50, 11);
+    printf("is %.2f", qou);
+    if (tryAgaincalculator())
+        divide();
+    else
+        returnHomecalculator();
+
+getch();
 
     if (tryAgain())
-        calculator();
+        series();
     else
         returnHome();
 }
@@ -475,7 +475,7 @@ void endProgram()
 
 void calculator()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
     gotoxy(48, 10);
     printf(" >  CALCULATOR        ");
 
@@ -493,7 +493,7 @@ void series()
 
 void pattern()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),BACKGROUND_INTENSITY);
     gotoxy(48, 8);
     printf(" >  PATTERN           ");
 
