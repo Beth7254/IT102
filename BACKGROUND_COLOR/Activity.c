@@ -26,10 +26,10 @@ int tryAgain();
 void returnHome();
 void userAdd();
 
-int num1 = 0, num2 = 0, sum = 0, diff = 0, prod = 0; float qou = 0;
+int num1 = 0, num2 = 0, sum = 0, diff = 0, prod = 0;
+float qou = 0;
 
-
-void main()
+int main()
 {
     int choice = 0;
     int index = 1;
@@ -93,7 +93,6 @@ void main()
         }
     }
 }
-
 
 int tryAgain()
 {
@@ -237,7 +236,6 @@ void seriesbody()
     else
         returnHome();
 }
-
 
 void exitProgram()
 {
@@ -456,7 +454,7 @@ void divide()
     else
         returnHomecalculator();
 
-getch();
+    getch();
 
     if (tryAgain())
         series();
@@ -493,7 +491,7 @@ void series()
 
 void pattern()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),BACKGROUND_INTENSITY);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
     gotoxy(48, 8);
     printf(" >  PATTERN           ");
 

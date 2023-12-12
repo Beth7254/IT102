@@ -2,29 +2,9 @@
 #include <stdio.h>
 #include <conio.h>
 
-void mainbox()
-void login()
-{
-    char username[20], password[20];
-    printf("LOGIN\n");
-    printf("Username: ");
-    scanf("%s", username);
-    printf("Password: ");
-    scanf("%s", password);
+void mainbox();
+void login();
 
-    if (strcmp(username, "marybeth.gracia@dbtc-cebu.edu.ph") == 0 && strcmp(password, "Mary2004") == 0)
-    {
-        printf("Hello < %s >\n", username);
-    }
-    else
-    {
-        printf("Invalid username or password.\n");
-    }
-    int tryAgain()
-    {
-        return 1;
-    }
-}
 
 void patternBody()
 {
