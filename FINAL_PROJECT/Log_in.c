@@ -243,8 +243,7 @@ void pascalTriangleBody()
 void sortingBody()
 {
 
-
-     getch();
+    getch();
 
     if (tryAgain())
         series();

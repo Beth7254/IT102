@@ -8,7 +8,10 @@
         "FP.C": "cpp",
         "ACTIVITY_NUMBER3.C": "cpp",
         "DIPAFINAL.C": "cpp",
-        "NOT_FINAL.C": "cpp"
+        "NOT_FINAL.C": "cpp",
+        "PATTERN1.C": "cpp",
+        "NAME.C": "cpp",
+        "PATTERN_NAME.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
