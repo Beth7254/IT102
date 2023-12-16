@@ -17,6 +17,8 @@ void colorS();
 void pattern();
 
 void pattern1();
+void pattern2();
+void pattern3();
 int main()
 {
     int choice = 0;
@@ -115,8 +117,8 @@ int checkCredentials(char *username, char *password)
 
 void logIn()
 {
-    char username[80];
-    char password[80];
+    char username[50];
+    char password[50];
     int i = 0;
     char ch;
     loginBorder();
@@ -147,7 +149,7 @@ void logIn()
         else
         {
             password[i++] = ch;
-            printf("♡");
+            printf("💜");
         }
     }
 
@@ -182,20 +184,10 @@ void mainMenu()
     gotoxy(3, 5);
     printf("║       Hello!         ║\n");
     gotoxy(3, 6);
-    printf("║      Mary Beth♡      ║\n");
+    printf("║      Mary Beth💜     ║\n");
     gotoxy(3, 7);
     printf("║                      ║\n");
     gotoxy(3, 8);
-    printf("║                      ║\n");
-    gotoxy(3, 9);
-    printf("║                      ║\n");
-    gotoxy(3, 10);
-    printf("║                      ║\n");
-    gotoxy(3, 11);
-    printf("║                      ║\n");
-    gotoxy(3, 12);
-    printf("║                      ║\n");
-    gotoxy(3, 13);
     printf("║                      ║\n");
     gotoxy(3, 14);
     printf("╠══════════════════════╣\n");
@@ -221,59 +213,31 @@ void mainMenu()
     printf("║  Sorting             ║\n");
     gotoxy(3, 25);
     printf("║                      ║\n");
-    gotoxy(3, 26);
-    printf("║                      ║\n");
-    gotoxy(3, 27);
-    printf("║                      ║\n");
-    gotoxy(3, 28);
-    printf("║                      ║\n");
-    gotoxy(3, 29);
-    printf("║                      ║\n");
-    gotoxy(3, 30);
-    printf("║                      ║\n");
-    gotoxy(3, 31);
-    printf("║                      ║\n");
-    gotoxy(3, 32);
-    printf("║                      ║\n");
-    gotoxy(3, 33);
-    printf("║                      ║\n");
-    gotoxy(3, 34);
-    printf("║                      ║\n");
-    gotoxy(3, 35);
-    printf("║                      ║\n");
-    gotoxy(3, 36);
-    printf("║                      ║\n");
-    gotoxy(3, 37);
-    printf("║                      ║\n");
-    gotoxy(3, 38);
-    printf("║                      ║\n");
-    gotoxy(3, 39);
-    printf("║                      ║\n");
     gotoxy(3, 40);
     printf("╚══════════════════════╝\n");
 }
 void colorQ()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
     gotoxy(3, 22);
     printf("  Quadriatic Formula  ");
 }
 void colorP()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
     gotoxy(3, 23);
     printf("  Pascals Triangle    ");
 }
 void colorS()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
     gotoxy(3, 24);
     printf("  Sorting             ");
 }
 
 void colorPatternone()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
     gotoxy(3, 16);
     printf(" >  Pattern 1          ");
 
@@ -281,7 +245,7 @@ void colorPatternone()
 }
 void colorPatterntwo()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
     gotoxy(3, 17);
     printf(" >  Pattern 2          ");
 
@@ -289,7 +253,7 @@ void colorPatterntwo()
 }
 void colorPatternthree()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
     gotoxy(3, 18);
     printf(" >  Pattern 3          ");
 
@@ -297,7 +261,7 @@ void colorPatternthree()
 }
 void colorPatternfour()
 {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_BLUE);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_GREEN);
     gotoxy(3, 19);
     printf(" >  Pattern 4          ");
 
@@ -306,59 +270,82 @@ void colorPatternfour()
 
 void pattern1()
 {
-    gotoxy(30, 10);
-    printf("* * * * * \n");
-    gotoxy(30, 11);
-    printf(" *     * \n");
-    gotoxy(30, 12);
-    printf("  *   * \n");
-    gotoxy(30, 13);
-    printf("   * * \n");
-    gotoxy(30, 14);
-    printf("    *");
+        gotoxy(50, 13);printf("╔══════════════════════════╗");
+        gotoxy(50, 14);printf("║        PATTERN 1         ║");
+        gotoxy(50, 15);printf("║                          ║");
+        gotoxy(50, 16);printf("║        * * * * *         ║");
+        gotoxy(50, 17);printf("║         *     *          ║");
+        gotoxy(50, 18);printf("║          *   *           ║");
+        gotoxy(50, 19);printf("║           * *            ║");
+        gotoxy(50, 20);printf("║            *             ║");
+        gotoxy(50, 21);printf("║                          ║");
+        gotoxy(50, 22);printf("║                          ║");
+        gotoxy(50, 22);printf("║    \033[32mPress any Key to\033[0m      ║");
+        gotoxy(50, 23);printf("║        \033[32mContinue...\033[0m       ║");
+        gotoxy(50, 24);printf("╚══════════════════════════╝\n");
+    getch();
+    system("cls");
+    
 }
-
 void pattern2()
 {
+        gotoxy(50, 13);printf("╔══════════════════════════╗");
+        gotoxy(50, 14);printf("║        PATTERN 2         ║");
+        gotoxy(50, 15);printf("║                          ║");
+        gotoxy(50, 16);printf("║        * * * * *         ║");
+        gotoxy(50, 17);printf("║        *       *         ║");
+        gotoxy(50, 18);printf("║        *       *         ║");
+        gotoxy(50, 19);printf("║        *       *         ║");
+        gotoxy(50, 20);printf("║        * * * * *         ║");
+        gotoxy(50, 21);printf("║                          ║");
+        gotoxy(50, 22);printf("║    \033[32mPress any Key to\033[0m      ║");
+        gotoxy(50, 23);printf("║        \033[32mContinue...\033[0m       ║");
+        gotoxy(50, 24);printf("╚══════════════════════════╝\n");
+    getch();
+    system("cls");
+}
+void pattern3()
+{
+        gotoxy(50, 13);printf("╔══════════════════════════╗");
+        gotoxy(50, 14);printf("║        PATTERN 2         ║");
+        gotoxy(50, 15);printf("║                          ║");
+        gotoxy(50, 16);printf("║   M                      ║");
+        gotoxy(50, 17);printf("║   MA                     ║");
+        gotoxy(50, 18);printf("║   MAR                    ║");
+        gotoxy(50, 19);printf("║   MARY                   ║");
+        gotoxy(50, 20);printf("║   MARYB                  ║");
+        gotoxy(50, 21);printf("║   MARYBE                 ║");
+        gotoxy(50, 22);printf("║   MARYBET                ║");
+        gotoxy(50, 23);printf("║   MARYBETH               ║");
+        gotoxy(50, 24);printf("║   MARYBETH💜             ║");
+        gotoxy(50, 25);printf("║                          ║");
+        gotoxy(50, 26);printf("║    \033[32mPress any Key to\033[0m      ║");
+        gotoxy(50, 27);printf("║        \033[32mContinue...\033[0m       ║");
+        gotoxy(50, 28);printf("╚══════════════════════════╝\n");
+    getch();
+    system("cls");
 }
 
-void print_pattern3(char *name)
-{
-    int len = strlen(name);
-    for (int i = 0; i < len; i++)
-    {
-        for (int j = 0; j <= i; j++)
-        {
-            printf("%c", name[j]);
-        }
-        printf("\n");
-    }
-}
 
-void main()
-{
-    char name[] = "MARY BETH GRACIA";
-    print_pattern(name);
-}
 
 void loginBorder()
 {
     gotoxy(50, 12);
-    printf("╔═════════════════════════════════════╗");
+    printf("╔══════════════════════════════════════════════════════════════════╗");
     gotoxy(50, 13);
-    printf("║              Log-In♡:               ║");
+    printf("║                            Log-In :                              ║");
     gotoxy(50, 14);
-    printf("╠═════════════════════════════════════╣\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 15);
-    printf("║                                     ║\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 16);
-    printf("║                                     ║\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 17);
-    printf("║                                     ║\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 18);
-    printf("║                                     ║\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 19);
-    printf("║                                     ║\n");
+    printf("║                                                                  ║\n");
     gotoxy(50, 20);
-    printf("╚═════════════════════════════════════╝\n");
+    printf("╚══════════════════════════════════════════════════════════════════╝\n");
 }

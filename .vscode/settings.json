@@ -11,7 +11,8 @@
         "NOT_FINAL.C": "cpp",
         "PATTERN1.C": "cpp",
         "NAME.C": "cpp",
-        "PATTERN_NAME.C": "cpp"
+        "PATTERN_NAME.C": "cpp",
+        "HEHE.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
